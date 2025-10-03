@@ -1,27 +1,27 @@
-import { useState } from 'react'
-import LoadingScreen from './components/LoadingScreen';
-import Hero from './components/Hero';
+import { useState } from "react";
+import { ScrollTrigger, SplitText } from "gsap/all";
+import { gsap } from "gsap";
+import LoadingScreen from "./components/LoadingScreen";
+import Hero from "./components/Hero";
+import './App.css'
 
-const App = () => {
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+const App = () => { 
   const [showContent, setShowContent] = useState(false);
 
   const handleLoadingComplete = () => {
     setShowContent(true);
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = "unset";
   };
 
   // Disable scroll during loading
   if (!showContent) {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   }
 
   // Optional: Specify which videos to track
-  const criticalVideos = [
-    'videos/hero-1.mp4',
-    'videos/hero-2.mp4',
-    'videos/hero-3.mp4',
-    'videos/hero-4.mp4',
-  ];
+  //const criticalVideos: string[] = [];
 
   return (
     <>
@@ -29,18 +29,18 @@ const App = () => {
       {!showContent && (
         <LoadingScreen
           onComplete={handleLoadingComplete}
-          videoSources={criticalVideos}
+          //videoSources={criticalVideos}
         />
       )}
 
       {/* Main Content */}
       {showContent && (
-        <main className='relative min-h-screen w-screen overflow-x-hidden'>
+        <main className="relative min-h-screen w-screen overflow-x-hidden">
           <Hero />
         </main>
       )}
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
