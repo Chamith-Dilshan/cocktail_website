@@ -2,7 +2,7 @@
 
 const Hero = () => {
   return (
-    <div className="flex-center h-[100vh]">
+    <div className="flex-center h-screen">
       <h1 className="text-3xl text-indigo-400">Hello</h1>
     </div>
   );

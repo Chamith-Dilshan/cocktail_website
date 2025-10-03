@@ -198,7 +198,7 @@ const LoadingScreen = ({ onComplete, videoSources }: LoadingScreenProps) => {
 
 
     return (
-        <div className='loading-screen fixed inset-0 z-[9999] flex flex-col items-center 
+        <div className='loading-screen fixed inset-0 z-9999 flex flex-col items-center 
         justify-center bg-blue-200'>
             {/* Background Animation */}
             <div className='absolute inset-0 overflow-hidden'>
@@ -237,7 +237,7 @@ const LoadingScreen = ({ onComplete, videoSources }: LoadingScreenProps) => {
                         {/* Background Bar */}
                         <div className='loading-progress w-full h-2 bg-white/20 rounded-full overflow-hidden'>
                             <div
-                                className='loading-progress h-full bg-gradient-to-r 
+                                className='loading-progress h-full bg-linear-to-r 
                                 from-yellow-300 to-white rounded-full transition-all 
                                 duration-500 ease-out'
                                 style={{ width: `${displayProgress}%` }}
@@ -246,7 +246,7 @@ const LoadingScreen = ({ onComplete, videoSources }: LoadingScreenProps) => {
 
                         {/* Glow Effect */}
                         <div
-                            className='absolute top-0 h-2 bg-gradient-to-r 
+                            className='absolute top-0 h-2 bg-linear-to-r 
                             from-yellow-300/50 to-white/50 rounded-full blur-sm 
                             transition-all duration-500'
                             style={{ width: `${displayProgress}%` }}

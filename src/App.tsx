@@ -3,12 +3,11 @@ import { ScrollTrigger, SplitText } from "gsap/all";
 import { gsap } from "gsap";
 import LoadingScreen from "./components/LoadingScreen";
 import Hero from "./components/Hero";
-import './App.css'
 import NavBar from "./components/NavBar";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const App = () => { 
+const App = () => {
   const [showContent, setShowContent] = useState(false);
 
   const handleLoadingComplete = () => {
