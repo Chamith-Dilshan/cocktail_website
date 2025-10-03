@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import LoadingScreen from "./components/LoadingScreen";
 import Hero from "./components/Hero";
 import './App.css'
+import NavBar from "./components/NavBar";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -36,6 +37,7 @@ const App = () => {
       {/* Main Content */}
       {showContent && (
         <main className="relative min-h-screen w-screen overflow-x-hidden">
+          <NavBar />
           <Hero />
         </main>
       )}
