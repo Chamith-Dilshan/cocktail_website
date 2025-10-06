@@ -13,16 +13,7 @@ const LoadingScreen = ({ onComplete, videoSources }: LoadingScreenProps) => {
     const [loadingStatus, setLoadingStatus] = useState('Initializing assets...');
 
     // Default video sources if not provided
-    const defaultVideoSources = [
-        'videos/hero-1.mp4',
-        'videos/hero-2.mp4',
-        'videos/hero-3.mp4',
-        'videos/hero-4.mp4',
-        'videos/feature-1.mp4',
-        'videos/feature-2.mp4',
-        'videos/feature-3.mp4',
-        'videos/feature-4.mp4'
-    ];
+    const defaultVideoSources = ["/videos/output.mp4"];
 
     const videosToLoad = videoSources || defaultVideoSources;
     const totalVideos = videosToLoad.length;
@@ -199,7 +190,7 @@ const LoadingScreen = ({ onComplete, videoSources }: LoadingScreenProps) => {
 
     return (
         <div className='loading-screen fixed inset-0 z-9999 flex flex-col items-center 
-        justify-center bg-blue-200'>
+        justify-center bg-blend-darken'>
             {/* Background Animation */}
             <div className='absolute inset-0 overflow-hidden'>
                 <div className='loading-bg-1 absolute -top-1/2 -left-1/2 w-full h-full 
