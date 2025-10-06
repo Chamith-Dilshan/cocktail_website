@@ -360,10 +360,16 @@
 }
 
 @utility masked-img {
+  -webkit-mask-image: url("/images/mask-img.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: 50%;
+  
   mask-image: url("/images/mask-img.png");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 50%;
+  
 }
 
 @utility title {
